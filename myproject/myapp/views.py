@@ -15,3 +15,10 @@ def counter(request):
     words = request.POST['words']
     amount_of_words = len(words.split())
     return render(request, 'counter.html', {'counter' : amount_of_words})
+
+def profile(request):
+    context = {
+        'name' : 'Ahmadi',
+        'nationality' : 'Indonesia'
+    }
+    return render(request, 'profile.html', context)
